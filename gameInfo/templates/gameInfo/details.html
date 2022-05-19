@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{matchup.matchup_title}}</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>Bookmaker</th>
+        <th>Bet Type</th>
+        <th>Selected Team</th>
+        <th>Odds</th>
+    </tr>
+    {% for bet in all_bets %}
+    <tr>
+        <td>{{bet.bookmaker}}</td>
+        <td>{{bet.bet_type}}</td>
+        <td>{{bet.selected_team}}</td>
+        <td>{{bet.price}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="/gameInfo/"> Go Back</a>
+</body>
+</html>

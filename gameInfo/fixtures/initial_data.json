@@ -1,0 +1,272 @@
+[
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "ARI",
+            "team_name": "Arizona Diamondbacks",
+            "location": "Phoenix",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "ATL",
+            "team_name": "Atlanta Braves",
+            "location": "Atlanta",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "BAL",
+            "team_name": "Baltimore Orioles",
+            "location": "Baltimore",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "BOS",
+            "team_name": "Boston Red Sox",
+            "location": "Boston",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "CHC",
+            "team_name": "Chicago Cubs",
+            "location": "Chicago",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "CWS",
+            "team_name": "Chicago White Sox",
+            "location": "Chicago",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "CIN",
+            "team_name": "Cincinnati Reds",
+            "location": "Cincinnati",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "CLE",
+            "team_name": "Cleveland Guardians",
+            "location": "Cleveland",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "COL",
+            "team_name": "Colorado Rockies",
+            "location": "Denver",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "DET",
+            "team_name": "Detroit Tigers",
+            "location": "Detroit",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "HOU",
+            "team_name": "Houston Astros",
+            "location": "Houston",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "KC",
+            "team_name": "Kansas City Royals",
+            "location": "Kansas City",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "LAA",
+            "team_name": "Los Angeles Angels",
+            "location": "Anaheim",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "LAD",
+            "team_name": "Los Angeles Dodgers",
+            "location": "Los Angeles",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "MIA",
+            "team_name": "Miami Marlins",
+            "location": "Miami",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "MIL",
+            "team_name": "Milwaukee Brewers",
+            "location": "Milwaukee",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "MIN",
+            "team_name": "Minnesota Twins",
+            "location": "Minneapolis",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "NYM",
+            "team_name": "New York Mets",
+            "location": "Flushing",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "NYY",
+            "team_name": "New York Yankees",
+            "location": "Bronx",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "OAK",
+            "team_name": "Oakland Athletics",
+            "location": "Oakland",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "PHI",
+            "team_name": "Philadelphia Phillies",
+            "location": "Philadelphia",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "PIT",
+            "team_name": "Pittsburgh Pirates",
+            "location": "Pittsburgh",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "SD",
+            "team_name": "San Diego Padres",
+            "location": "San Diego",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "SF",
+            "team_name": "San Francisco Giants",
+            "location": "San Francisco",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "SEA",
+            "team_name": "Seattle Mariners",
+            "location": "Seattle",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "STL",
+            "team_name": "St. Louis Cardinals",
+            "location": "St. Louis",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "TB",
+            "team_name": "Tampa Bay Rays",
+            "location": "St. Petersburg",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "TEX",
+            "team_name": "Texas Rangers",
+            "location": "Arlington",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "TOR",
+            "team_name": "Toronto Blue Jays",
+            "location": "Toronto",
+            "sport": "MLB"
+        }
+    },
+    {
+        "model": "gameInfo.team",
+        "fields": {
+            "team_id": "WSH",
+            "team_name": "Washington Nationals",
+            "location": "Washington",
+            "sport": "MLB"
+        }
+    }
+]

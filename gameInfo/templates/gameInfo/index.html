@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Current MLB Matchups</title>
+</head>
+<body>
+{% if all_matchups %}
+<ul>
+    <h1>Current MLB Matchups</h1>
+    {% for matchup in all_matchups %}
+    <li><a href="{% url 'gameInfo:detail' matchup.matchup_id %}">{{ matchup.matchup_title }} - {{matchup.time}}</a></li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No matchups are available.</p>
+{% endif %}
+</body>
+</html>
