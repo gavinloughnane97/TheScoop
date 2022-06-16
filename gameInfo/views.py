@@ -2,9 +2,10 @@ from datetime import datetime, timedelta
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import HttpResponse, HttpResponseNotFound, Http404
 from django.shortcuts import render, get_object_or_404
-from gameInfo.models import Team, Matchup, Bet
+from gameInfo.models import Team, Matchup, Bet, Game
 import pytz
 import requests
+import statsapi
 
 
 # Create your views here.
@@ -21,9 +22,17 @@ def index(request):
 def detail(request, matchup_id):
     matchup = get_object_or_404(Matchup, pk=matchup_id)
     all_bets = list(Bet.objects.filter(matchup_id=matchup_id))
+    home_wins = list(Game.objects.filter(winning_team=matchup.home_team))
+    home_losses = list(Game.objects.filter(losing_team=matchup.home_team))
+    away_wins = list(Game.objects.filter(winning_team=matchup.away_team))
+    away_losses = list(Game.objects.filter(losing_team=matchup.away_team))
     context = {
         'matchup': matchup,
-        'all_bets': all_bets
+        'all_bets': all_bets,
+        'home_wins': len(home_wins),
+        'home_losses': len(home_losses),
+        'away_wins': len(away_wins),
+        'away_losses': len(away_losses)
     }
     return render(request, 'gameInfo/details.html', context)
 
@@ -127,3 +136,76 @@ def delete_all():
     all_matchups = Matchup.objects.all()
     print("Deleting", all_matchups.count(), "matchups")
     all_matchups.delete()
+
+def game_exists(game):
+    try:
+        existing_game = Game.objects.get(pk=game.game_id)
+        print(
+            str(existing_game.game_id) + " already exists")
+        return True
+    except ObjectDoesNotExist:
+        return False
+
+
+def query_games(request):
+    gameDict = statsapi.schedule(date=None, start_date="2022-04-07", end_date="2022-06-16", team="", opponent="",
+                                 sportId=1, game_id=None)
+    gameLoadCount = 0
+    for game in gameDict:
+        game_type = game.get('game_type')
+        if game_type == 'R' or game_type == 'F' or game_type == 'D' or game_type == 'L' or game_type == 'W':
+            game_id = game.get('game_id')
+            game_date = game.get('date')
+            print(game.get('away_id'))
+            print(game.get('away_name'))
+            away_team = Team.objects.get(team_num_id=game.get('away_id'))
+            home_team = Team.objects.get(team_num_id=game.get('home_id'))
+            doubleheader = game.get('doubleheader')
+            game_num = game.get('game_num')
+            home_probable_pitcher = game.get('home_probable_pitcher')
+            away_probable_pitcher = game.get('away_probable_pitcher')
+            home_pitcher_note = game.get('home_pitcher_note')
+            away_pitcher_note = game.get('away_pitcher_note')
+            home_score = game.get('home_score')
+            away_score = game.get('away_score')
+            venue_id = game.get('venue_id')
+            venue_name = game.get('venue_name')
+            if home_score > away_score:
+                winning_team = home_team
+                losing_team = away_team
+            else:
+                winning_team = away_team
+                losing_team = home_team
+            winning_pitcher = game.get('winning_pitcher')
+            losing_pitcher = game.get('losing_pitcher')
+            save_pitcher = game.get('save_pitcher')
+            summary = game.get('summary')
+
+            game_model = Game(game_id=game_id,
+                              game_date=game_date,
+                              game_type=game_type,
+                              away_team=away_team,
+                              home_team=home_team,
+                              doubleheader=doubleheader,
+                              game_num=game_num,
+                              home_probable_pitcher=home_probable_pitcher,
+                              away_probable_pitcher=away_probable_pitcher,
+                              home_pitcher_note=home_pitcher_note,
+                              away_pitcher_note=away_pitcher_note,
+                              home_score=home_score,
+                              away_score=away_score,
+                              venue_id=venue_id,
+                              venue_name=venue_name,
+                              winning_team=winning_team,
+                              losing_team=losing_team,
+                              winning_pitcher=winning_pitcher,
+                              losing_pitcher=losing_pitcher,
+                              save_pitcher=save_pitcher,
+                              summary=summary)
+            if not game_exists(game_model):
+                game_model.save()
+                gameLoadCount += 1
+
+    all_games = Game.objects.all
+    print(all_games)
+    return HttpResponse("Loaded {} new games".format(gameLoadCount))

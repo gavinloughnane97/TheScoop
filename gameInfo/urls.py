@@ -8,6 +8,7 @@ app_name = 'gameInfo'
 urlpatterns = [
     path('', views.index, name='index'),
     path('matchups', views.query_matchups, name='query_matchups'),
+    path('games', views.query_games, name='query_games'),
     path('<str:matchup_id>', views.detail, name='detail'),
 ]
 if settings.DEBUG:
