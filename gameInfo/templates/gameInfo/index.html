@@ -2,13 +2,39 @@
 <html>
 <head>
     <title>Current MLB Matchups</title>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+</style>
 </head>
 <body>
 {% if all_matchups %}
 <ul>
     <h1>Current MLB Matchups</h1>
+    {% load static %}
     {% for matchup in all_matchups %}
-    <li><a href="{% url 'gameInfo:detail' matchup.matchup_id %}">{{ matchup.matchup_title }} - {{matchup.time}}</a></li>
+    <li>
+    <img src="{% static matchup.away_team.image_path %}" alt="Away Team" width="40" height="40">
+    <img src="{% static matchup.home_team.image_path %}" alt="Home Team" width="40" height="40">
+    <a href="{% url 'gameInfo:detail' matchup.matchup_id %}">{{ matchup.matchup_title }} - {{matchup.time}}</a></li>
     {% endfor %}
 </ul>
 {% else %}

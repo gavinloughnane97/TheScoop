@@ -5,7 +5,8 @@
             "team_id": "ARI",
             "team_name": "Arizona Diamondbacks",
             "location": "Phoenix",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/ARI.png"
         }
     },
     {
@@ -14,7 +15,8 @@
             "team_id": "ATL",
             "team_name": "Atlanta Braves",
             "location": "Atlanta",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/ATL.png"
         }
     },
     {
@@ -23,7 +25,8 @@
             "team_id": "BAL",
             "team_name": "Baltimore Orioles",
             "location": "Baltimore",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/BAL.png"
         }
     },
     {
@@ -32,7 +35,8 @@
             "team_id": "BOS",
             "team_name": "Boston Red Sox",
             "location": "Boston",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/BOS.png"
         }
     },
     {
@@ -41,7 +45,8 @@
             "team_id": "CHC",
             "team_name": "Chicago Cubs",
             "location": "Chicago",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CHC.png"
         }
     },
     {
@@ -50,7 +55,8 @@
             "team_id": "CWS",
             "team_name": "Chicago White Sox",
             "location": "Chicago",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CWS.png"
         }
     },
     {
@@ -59,7 +65,8 @@
             "team_id": "CIN",
             "team_name": "Cincinnati Reds",
             "location": "Cincinnati",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CIN.png"
         }
     },
     {
@@ -68,7 +75,8 @@
             "team_id": "CLE",
             "team_name": "Cleveland Guardians",
             "location": "Cleveland",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CLE.png"
         }
     },
     {
@@ -77,7 +85,8 @@
             "team_id": "COL",
             "team_name": "Colorado Rockies",
             "location": "Denver",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/COL.png"
         }
     },
     {
@@ -86,7 +95,8 @@
             "team_id": "DET",
             "team_name": "Detroit Tigers",
             "location": "Detroit",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/DET.png"
         }
     },
     {
@@ -95,7 +105,8 @@
             "team_id": "HOU",
             "team_name": "Houston Astros",
             "location": "Houston",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/HOU.png"
         }
     },
     {
@@ -104,7 +115,8 @@
             "team_id": "KC",
             "team_name": "Kansas City Royals",
             "location": "Kansas City",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/KC.png"
         }
     },
     {
@@ -113,7 +125,8 @@
             "team_id": "LAA",
             "team_name": "Los Angeles Angels",
             "location": "Anaheim",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/LAA.png"
         }
     },
     {
@@ -122,7 +135,8 @@
             "team_id": "LAD",
             "team_name": "Los Angeles Dodgers",
             "location": "Los Angeles",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/LAD.png"
         }
     },
     {
@@ -131,7 +145,8 @@
             "team_id": "MIA",
             "team_name": "Miami Marlins",
             "location": "Miami",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIA.png"
         }
     },
     {
@@ -140,7 +155,8 @@
             "team_id": "MIL",
             "team_name": "Milwaukee Brewers",
             "location": "Milwaukee",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIL.png"
         }
     },
     {
@@ -149,7 +165,8 @@
             "team_id": "MIN",
             "team_name": "Minnesota Twins",
             "location": "Minneapolis",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIN.png"
         }
     },
     {
@@ -158,7 +175,8 @@
             "team_id": "NYM",
             "team_name": "New York Mets",
             "location": "Flushing",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/NYM.png"
         }
     },
     {
@@ -167,7 +185,8 @@
             "team_id": "NYY",
             "team_name": "New York Yankees",
             "location": "Bronx",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/NYY.png"
         }
     },
     {
@@ -176,7 +195,8 @@
             "team_id": "OAK",
             "team_name": "Oakland Athletics",
             "location": "Oakland",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/OAK.png"
         }
     },
     {
@@ -185,7 +205,8 @@
             "team_id": "PHI",
             "team_name": "Philadelphia Phillies",
             "location": "Philadelphia",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/OAK.png"
         }
     },
     {
@@ -194,7 +215,8 @@
             "team_id": "PIT",
             "team_name": "Pittsburgh Pirates",
             "location": "Pittsburgh",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/PIT.png"
         }
     },
     {
@@ -203,7 +225,8 @@
             "team_id": "SD",
             "team_name": "San Diego Padres",
             "location": "San Diego",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SD.png"
         }
     },
     {
@@ -212,7 +235,8 @@
             "team_id": "SF",
             "team_name": "San Francisco Giants",
             "location": "San Francisco",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SF.png"
         }
     },
     {
@@ -221,7 +245,8 @@
             "team_id": "SEA",
             "team_name": "Seattle Mariners",
             "location": "Seattle",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SEA.png"
         }
     },
     {
@@ -230,7 +255,8 @@
             "team_id": "STL",
             "team_name": "St. Louis Cardinals",
             "location": "St. Louis",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/STL.png"
         }
     },
     {
@@ -239,7 +265,8 @@
             "team_id": "TB",
             "team_name": "Tampa Bay Rays",
             "location": "St. Petersburg",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TB.png"
         }
     },
     {
@@ -248,7 +275,8 @@
             "team_id": "TEX",
             "team_name": "Texas Rangers",
             "location": "Arlington",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TEX.png"
         }
     },
     {
@@ -257,7 +285,8 @@
             "team_id": "TOR",
             "team_name": "Toronto Blue Jays",
             "location": "Toronto",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TOR.png"
         }
     },
     {
@@ -266,7 +295,8 @@
             "team_id": "WSH",
             "team_name": "Washington Nationals",
             "location": "Washington",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/WSH.png"
         }
     }
 ]

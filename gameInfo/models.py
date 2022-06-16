@@ -6,6 +6,7 @@ class Team(models.Model):
     team_name = models.CharField(max_length=40)
     location = models.CharField(max_length=40)
     sport = models.CharField(max_length=40)
+    image_path = models.CharField(max_length=40)
 
     def __str__(self):
         return self.team_id
