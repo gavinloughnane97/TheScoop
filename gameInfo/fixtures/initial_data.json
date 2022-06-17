@@ -3,270 +3,330 @@
         "model": "gameInfo.team",
         "fields": {
             "team_id": "ARI",
+            "team_num_id": 109,
             "team_name": "Arizona Diamondbacks",
             "location": "Phoenix",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/ARI.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "ATL",
+            "team_num_id": 144,
             "team_name": "Atlanta Braves",
             "location": "Atlanta",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/ATL.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "BAL",
+            "team_num_id": 110,
             "team_name": "Baltimore Orioles",
             "location": "Baltimore",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/BAL.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "BOS",
+            "team_num_id": 111,
             "team_name": "Boston Red Sox",
             "location": "Boston",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/BOS.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "CHC",
+            "team_num_id": 112,
             "team_name": "Chicago Cubs",
             "location": "Chicago",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CHC.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "CWS",
+            "team_num_id": 145,
             "team_name": "Chicago White Sox",
             "location": "Chicago",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CWS.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "CIN",
+            "team_num_id": 113,
             "team_name": "Cincinnati Reds",
             "location": "Cincinnati",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CIN.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "CLE",
+            "team_num_id": 114,
             "team_name": "Cleveland Guardians",
             "location": "Cleveland",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/CLE.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "COL",
+            "team_num_id": 115,
             "team_name": "Colorado Rockies",
             "location": "Denver",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/COL.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "DET",
+            "team_num_id": 116,
             "team_name": "Detroit Tigers",
             "location": "Detroit",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/DET.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "HOU",
+            "team_num_id": 117,
             "team_name": "Houston Astros",
             "location": "Houston",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/HOU.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "KC",
+            "team_num_id": 118,
             "team_name": "Kansas City Royals",
             "location": "Kansas City",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/KC.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "LAA",
+            "team_num_id": 108,
             "team_name": "Los Angeles Angels",
             "location": "Anaheim",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/LAA.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "LAD",
+            "team_num_id": 119,
             "team_name": "Los Angeles Dodgers",
             "location": "Los Angeles",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/LAD.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "MIA",
+            "team_num_id": 146,
             "team_name": "Miami Marlins",
             "location": "Miami",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIA.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "MIL",
+            "team_num_id": 158,
             "team_name": "Milwaukee Brewers",
             "location": "Milwaukee",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIL.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "MIN",
+            "team_num_id": 142,
             "team_name": "Minnesota Twins",
             "location": "Minneapolis",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/MIN.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "NYM",
+            "team_num_id": 121,
             "team_name": "New York Mets",
             "location": "Flushing",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/NYM.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "NYY",
+            "team_num_id": 147,
             "team_name": "New York Yankees",
             "location": "Bronx",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/NYY.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "OAK",
+            "team_num_id": 133,
             "team_name": "Oakland Athletics",
             "location": "Oakland",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/OAK.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "PHI",
+            "team_num_id": 143,
             "team_name": "Philadelphia Phillies",
             "location": "Philadelphia",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/OAK.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "PIT",
+            "team_num_id": 134,
             "team_name": "Pittsburgh Pirates",
             "location": "Pittsburgh",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/PIT.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "SD",
+            "team_num_id": 135,
             "team_name": "San Diego Padres",
             "location": "San Diego",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SD.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "SF",
+            "team_num_id": 137,
             "team_name": "San Francisco Giants",
             "location": "San Francisco",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SF.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "SEA",
+            "team_num_id": 136,
             "team_name": "Seattle Mariners",
             "location": "Seattle",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/SEA.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "STL",
+            "team_num_id": 138,
             "team_name": "St. Louis Cardinals",
             "location": "St. Louis",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/STL.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "TB",
+            "team_num_id": 139,
             "team_name": "Tampa Bay Rays",
             "location": "St. Petersburg",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TB.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "TEX",
+            "team_num_id": 140,
             "team_name": "Texas Rangers",
             "location": "Arlington",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TEX.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "TOR",
+            "team_num_id": 141,
             "team_name": "Toronto Blue Jays",
             "location": "Toronto",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/TOR.png"
         }
     },
     {
         "model": "gameInfo.team",
         "fields": {
             "team_id": "WSH",
+            "team_num_id": 120,
             "team_name": "Washington Nationals",
             "location": "Washington",
-            "sport": "MLB"
+            "sport": "MLB",
+            "image_path": "gameInfo/WSH.png"
         }
     }
 ]
