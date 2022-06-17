@@ -155,7 +155,7 @@ def query_games(request):
         game_type = game.get('game_type')
         if game_type == 'R' or game_type == 'F' or game_type == 'D' or game_type == 'L' or game_type == 'W':
             game_id = game.get('game_id')
-            game_date = game.get('date')
+            game_date = game.get('game_date')
             print(game.get('away_id'))
             print(game.get('away_name'))
             away_team = Team.objects.get(team_num_id=game.get('away_id'))
