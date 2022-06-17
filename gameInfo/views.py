@@ -37,7 +37,7 @@ def detail(request, matchup_id):
         else:
             home_losses_last_ten += 1
 
-    away_all = list(Game.objects.filter(home_team=matchup.away_team) | Game.objects.filter(away_team=matchup.away_team))
+    away_all = list(Game.objects.filter(home_team=matchup.away_team) | Game.objects.filter(away_team=matchup.away_team).order_by("-game_date"))
     away_last_ten = list(away_all[0:10])
     away_wins_last_ten = 0
     away_losses_last_ten = 0
