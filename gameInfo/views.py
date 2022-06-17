@@ -26,13 +26,38 @@ def detail(request, matchup_id):
     home_losses = list(Game.objects.filter(losing_team=matchup.home_team))
     away_wins = list(Game.objects.filter(winning_team=matchup.away_team))
     away_losses = list(Game.objects.filter(losing_team=matchup.away_team))
+
+    home_all = list(Game.objects.filter(home_team=matchup.home_team) | Game.objects.filter(away_team=matchup.home_team).order_by("-game_date"))
+    home_last_ten = list(home_all[0:10])
+    home_wins_last_ten = 0
+    home_losses_last_ten = 0
+    for game in home_last_ten:
+        if game.winning_team==matchup.home_team:
+            home_wins_last_ten += 1
+        else:
+            home_losses_last_ten += 1
+
+    away_all = list(Game.objects.filter(home_team=matchup.away_team) | Game.objects.filter(away_team=matchup.away_team).order_by("-game_date"))
+    away_last_ten = list(away_all[0:10])
+    away_wins_last_ten = 0
+    away_losses_last_ten = 0
+    for game in away_last_ten:
+        if game.winning_team == matchup.away_team:
+            away_wins_last_ten += 1
+        else:
+            away_losses_last_ten += 1
+
     context = {
         'matchup': matchup,
         'all_bets': all_bets,
         'home_wins': len(home_wins),
         'home_losses': len(home_losses),
         'away_wins': len(away_wins),
-        'away_losses': len(away_losses)
+        'away_losses': len(away_losses),
+        'home_wins_last_ten': home_wins_last_ten,
+        'home_losses_last_ten': home_losses_last_ten,
+        'away_wins_last_ten': away_wins_last_ten,
+        'away_losses_last_ten': away_losses_last_ten
     }
     return render(request, 'gameInfo/details.html', context)
 
