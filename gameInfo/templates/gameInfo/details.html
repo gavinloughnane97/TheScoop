@@ -4,10 +4,35 @@
     <title>{{matchup.matchup_title}}</title>
 </head>
 <body>
-<p>{{matchup.home_team.team_name}}: {{home_wins}} - {{home_losses}}</p>
-<p>Last Ten Games: ({{home_wins_last_ten}} - {{home_losses_last_ten}})</p>
-<p>{{matchup.away_team.team_name}}: {{away_wins}} - {{away_losses}}</p>
-<p>Last Ten Games: ({{away_wins_last_ten}} - {{away_losses_last_ten}})</p>
+<p>{{matchup.home_team.team_name}} ({{home_wins}} - {{home_losses}})</p>
+{% if home_plus_minus_last_ten > 0 %}
+<p>Last Ten Games: ({{home_wins_last_ten}} - {{home_losses_last_ten}}) (+{{home_plus_minus_last_ten}})</p>
+{% else %}
+<p>Last Ten Games: ({{home_wins_last_ten}} - {{home_losses_last_ten}}) ({{home_plus_minus_last_ten}})</p>
+{% endif %}
+{% if home_plus_minus_vs_away > 0 %}
+<p>Record vs {{matchup.away_team.team_name}}: ({{home_wins_vs_away}} - {{home_losses_vs_away}}) (+{{home_plus_minus_vs_away}})</p>
+{% else %}
+<p>Record vs {{matchup.away_team.team_name}}: ({{home_wins_vs_away}} - {{home_losses_vs_away}}) ({{home_plus_minus_vs_away}})</p>
+{% endif %}
+<p>Expected Starting Pitcher: {{home_pitcher_today}} ({{home_pitcher_wins}} - {{home_pitcher_losses}})</p>
+<p>Average Runs Scored: {{home_runs_for_average}}</p>
+<p>Average Runs Allowed: {{home_runs_allowed_average}}</p>
+<br>
+<p>{{matchup.away_team.team_name}} ({{away_wins}} - {{away_losses}})</p>
+{% if away_plus_minus_last_ten > 0 %}
+<p>Last Ten Games: ({{away_wins_last_ten}} - {{away_losses_last_ten}}) (+{{away_plus_minus_last_ten}})</p>
+{% else %}
+<p>Last Ten Games: ({{away_wins_last_ten}} - {{away_losses_last_ten}}) ({{away_plus_minus_last_ten}})</p>
+{% endif %}
+{% if away_plus_minus_vs_home > 0 %}
+<p>Record vs {{matchup.home_team.team_name}}: ({{home_losses_vs_away}} - {{home_wins_vs_away}}) (+{{away_plus_minus_vs_home}})</p>
+{% else %}
+<p>Record vs {{matchup.home_team.team_name}}: ({{home_losses_vs_away}} - {{home_wins_vs_away}}) ({{away_plus_minus_vs_home}})</p>
+{% endif %}
+<p>Expected Starting Pitcher: {{away_pitcher_today}} ({{away_pitcher_wins}} - {{away_pitcher_losses}})</p>
+<p>Average Runs Scored: {{away_runs_for_average}}</p>
+<p>Average Runs Allowed: {{away_runs_allowed_average}}</p>
 <table border="1">
     <tr>
         <th>Bookmaker</th>

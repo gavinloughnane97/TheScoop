@@ -31,22 +31,71 @@ def detail(request, matchup_id):
     home_last_ten = list(home_all[0:10])
     home_wins_last_ten = 0
     home_losses_last_ten = 0
+    home_plus_minus_last_ten = 0
     for game in home_last_ten:
-        if game.winning_team==matchup.home_team:
+        if game.winning_team == matchup.home_team:
             home_wins_last_ten += 1
+            home_plus_minus_last_ten += (game.home_score - game.away_score)
         else:
             home_losses_last_ten += 1
+            home_plus_minus_last_ten += (game.away_score - game.home_score)
 
     away_all = list(Game.objects.filter(home_team=matchup.away_team) | Game.objects.filter(away_team=matchup.away_team).order_by("-game_date"))
     away_last_ten = list(away_all[0:10])
     away_wins_last_ten = 0
     away_losses_last_ten = 0
+    away_plus_minus_last_ten = 0
     for game in away_last_ten:
         if game.winning_team == matchup.away_team:
             away_wins_last_ten += 1
+            away_plus_minus_last_ten += (game.home_score - game.away_score)
         else:
             away_losses_last_ten += 1
+            away_plus_minus_last_ten += (game.away_score - game.home_score)
 
+    home_pitcher_today = home_all[0].home_probable_pitcher
+    away_pitcher_today = away_all[0].away_probable_pitcher
+
+    home_runs_for = 0
+    home_runs_allowed = 0
+    home_wins_vs_away = 0
+    home_losses_vs_away = 0
+    home_plus_minus_vs_away = 0
+    home_pitcher_wins = 0
+    home_pitcher_losses = 0
+    for game in home_all:
+        if matchup.home_team == game.home_team:
+            home_runs_for += game.home_score
+            home_runs_allowed += game.away_score
+            if matchup.away_team == game.away_team and matchup.home_team == game.winning_team:
+                home_wins_vs_away += 1
+                home_plus_minus_vs_away += (game.home_score - game.away_score)
+            elif matchup.away_team == game.away_team:
+                home_losses_vs_away += 1
+                home_plus_minus_vs_away += (game.home_score - game.away_score)
+        else:
+            home_runs_for += game.away_score
+            home_runs_allowed += game.home_score
+        if game.winning_pitcher == home_pitcher_today:
+            home_pitcher_wins += 1
+        elif game.losing_pitcher == home_pitcher_today:
+            home_pitcher_losses += 1
+
+    away_runs_for = 0
+    away_runs_allowed = 0
+    away_pitcher_wins = 0
+    away_pitcher_losses = 0
+    for game in away_all:
+        if matchup.away_team == game.home_team:
+            away_runs_for += game.home_score
+            away_runs_allowed += game.away_score
+        else:
+            away_runs_for += game.away_score
+            away_runs_allowed += game.home_score
+        if game.winning_pitcher == away_pitcher_today:
+            away_pitcher_wins += 1
+        elif game.losing_pitcher == away_pitcher_today:
+            away_pitcher_losses += 1
     context = {
         'matchup': matchup,
         'all_bets': all_bets,
@@ -57,7 +106,23 @@ def detail(request, matchup_id):
         'home_wins_last_ten': home_wins_last_ten,
         'home_losses_last_ten': home_losses_last_ten,
         'away_wins_last_ten': away_wins_last_ten,
-        'away_losses_last_ten': away_losses_last_ten
+        'away_losses_last_ten': away_losses_last_ten,
+        'home_pitcher_today': home_pitcher_today,
+        'away_pitcher_today': away_pitcher_today,
+        'home_runs_for_average': round(home_runs_for / len(home_all),2),
+        'home_runs_allowed_average': round(home_runs_allowed / len(home_all),2),
+        'away_runs_for_average': round(away_runs_for / len(away_all), 2),
+        'away_runs_allowed_average': round(away_runs_allowed / len(away_all), 2),
+        'home_wins_vs_away': home_wins_vs_away,
+        'home_losses_vs_away': home_losses_vs_away,
+        'home_plus_minus_vs_away': home_plus_minus_vs_away,
+        'away_plus_minus_vs_home': -1 * home_plus_minus_vs_away,
+        'home_plus_minus_last_ten': home_plus_minus_last_ten,
+        'away_plus_minus_last_ten': away_plus_minus_last_ten,
+        'home_pitcher_wins': home_pitcher_wins,
+        'home_pitcher_losses': home_pitcher_losses,
+        'away_pitcher_wins': away_pitcher_wins,
+        'away_pitcher_losses': away_pitcher_losses,
     }
     return render(request, 'gameInfo/details.html', context)
 
