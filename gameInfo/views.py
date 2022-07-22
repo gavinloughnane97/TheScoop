@@ -19,6 +19,10 @@ def index(request):
     return render(request, 'gameInfo/index.html', context)
 
 
+def sortBet(e):
+    return e.price
+
+
 def detail(request, matchup_id):
     matchup = get_object_or_404(Matchup, pk=matchup_id)
     all_bets = list(Bet.objects.filter(matchup_id=matchup_id))
@@ -26,6 +30,8 @@ def detail(request, matchup_id):
     home_losses = list(Game.objects.filter(losing_team=matchup.home_team))
     away_wins = list(Game.objects.filter(winning_team=matchup.away_team))
     away_losses = list(Game.objects.filter(losing_team=matchup.away_team))
+
+    all_bets.sort(reverse=True, key=sortBet)
 
     home_all = list(Game.objects.filter(home_team=matchup.home_team) | Game.objects.filter(away_team=matchup.home_team).order_by("-game_date"))
     home_last_ten = list(home_all[0:10])
